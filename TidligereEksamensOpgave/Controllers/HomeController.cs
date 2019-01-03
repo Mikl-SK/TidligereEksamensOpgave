@@ -5,15 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TidligereEksamensOpgave.Models;
+using System.Net.Http;
 
 namespace TidligereEksamensOpgave.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+
+        public HomeController()
+        {
+            
+        }
+        public async Task<IActionResult> Index()
         {
             return View();
         }
+     
 
         public IActionResult About()
         {
